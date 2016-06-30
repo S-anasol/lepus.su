@@ -1545,7 +1545,8 @@ function lepus_doTask(){
 						var_dump($info);
 						if($info == 'running'){
 							if($row['handler'] == 'KVM'){
-								$s = 'VPS готова';
+								$s = 'VPS готова.';
+								$s .= "\nHost: ".$server['ip'];
 								$s1 = 'root';
 							}
 							if($row['handler'] == 'VH'){
